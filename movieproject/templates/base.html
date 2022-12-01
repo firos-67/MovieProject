@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="{% static 'style.css' %}">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 <!-- Just an image -->
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'movieprojectapp:index' %}">
-    Movie Corner
-  </a>
+    <div align="left">
+        <a class="navbar-brand" href="{% url 'movieprojectapp:index' %}">
+            Movie Corner
+        </a>
+    </div>
+    {% if 'add' not in request.path %}
+    <div align="right">
+      <label class="mv">Add Movie</label>
+      <a href="{% url 'movieprojectapp:add' %}" class="add-link"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+    </div>
+    {% endif %}
 </nav>
 {% block body %}
 {% endblock %}

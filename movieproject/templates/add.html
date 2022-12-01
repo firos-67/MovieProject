@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
 {% block body %}
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="text" name="name" placeholder="Enter Movie name">
-    <input type="text" name="desc" placeholder="Enter Description">
-    <input type="text" name="year" placeholder="Enter year">
-    <input type="file" name="img">
-    <input type="submit">
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 my-card shadow">
+            <h2> Add Movie Details </h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Enter Movie name"><br>
+                <input type="text" name="desc" placeholder="Enter Description"><br>
+                <input type="text" name="year" placeholder="Enter year"><br>
+                <input type="file" name="img"><br>
+                <input type="submit" class="btn btn-success my-btn">
+            </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
 {% endblock %}

@@ -1,3 +1,51 @@
 body
 {
-background-color:#75858a}
+    background-color:#75858a;
+}
+
+.add{
+    padding-top:30px;
+}
+
+.center{
+    text-align:center;
+}
+
+.left{
+    text-align:left;
+}
+input{
+    margin-top:5px;
+}
+h2{
+    text-align:center;
+}
+
+.my-card{
+
+    margin-top:30px;
+    background-color:#BDCBD0;
+    padding-bottom:30px;
+    padding-top:20px;
+}
+
+.my-btn{
+    margin-top:10px;
+}
+
+.add-link{
+    color:white;
+    font-size:20px;
+}
+
+.add-link:hover{
+    color:#D5D020;
+}
+
+.mv{
+    color:white;
+    margin-right:10px;
+    font-size:15px;
+    font-weight:bold;
+    transform:translate(0,-3px);
+}
